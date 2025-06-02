@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método R3 - Etapa 1: Diagnóstico Estratégico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilo para o ícone de seta do accordion */
+        .accordion-button::after {
+            content: ' ▼'; /* Seta para baixo por padrão */
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        .accordion-button.open::after {
+            transform: rotate(180deg); /* Seta para cima quando aberto */
+        }
+        .step-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 1.5rem; /* py-0 px-6 */
+        }
+        .step-content.open {
+            max-height: 2000px; /* Aumentado para acomodar mais conteúdo */
+            padding: 1.5rem; /* py-6 px-6 */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .nested-list ul {
+            margin-left: 1.5rem; /* Indentação para sub-listas */
+            list-style-type: circle; /* Estilo diferente para sub-listas */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 font-sans leading-relaxed">
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <header class="text-center mb-10 py-8 bg-slate-800 rounded-xl shadow-2xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">
+                MÉTODO R3 – GUIA PRÁTICO
+            </h1>
+            <p class="text-2xl md:text-3xl text-sky-300 mt-2">ETAPA 1: Diagnóstico Estratégico</p>
+        </header>
+
+        <section class="mb-8 p-6 bg-slate-800 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-semibold mb-3 text-sky-400">🎯 Objetivo da Etapa:</h2>
+            <p class="text-slate-300">
+                Definir um ponto de partida sólido e realista com base nos dados da conta e nas respostas do cliente. Aqui, o social media assume o papel de investigador — é preciso entender o negócio por dentro e por fora.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-6 text-center text-sky-400">🪜 Passo a passo: Como fazer o diagnóstico completo</h2>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step1-content">
+                    <span>1. Briefing Detalhado com o Cliente</span>
+                </button>
+                <div id="step1-content" class="step-content bg-slate-700/50">
+                    <p class="mb-4 text-slate-300">(por vídeo, call, formulário ou mensagem direta)</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Sobre o Negócio</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Perguntas gerais sobre a empresa, missão, visão e valores.</li>
+                                <li>Histórico da empresa e principais marcos.</li>
+                                <li>Produtos/serviços oferecidos e seus diferenciais.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Sobre o Cliente (Decisor/Empresa)</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Quem são os decisores envolvidos no projeto?</li>
+                                <li>Quais são as expectativas em relação ao trabalho de marketing digital?</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Sobre a Rotina do Negócio</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Como funciona o processo de vendas atual?</li>
+                                <li>Existem sazonalidades ou eventos importantes para o negócio?</li>
+                                <li>Qual a capacidade de atendimento/produção?</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Sobre Experiências Anteriores com Marketing Digital</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Quais ações de marketing digital já foram realizadas?</li>
+                                <li>Quais foram os resultados (positivos e negativos)?</li>
+                                <li>Houve trabalho com outras agências/profissionais? Como foi a experiência?</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Entender Preferências e Percepções do Cliente</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Quais perfis/marcas o cliente admira e considera relevantes? Por quê?</li>
+                                <li>Quem o cliente acredita ser seu concorrente direto e indireto?</li>
+                                <li>Quem o cliente considera ser seu público ideal? (Detalhar persona, se houver)</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Equipe Envolvida e Recursos Disponíveis</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Quantas pessoas da equipe do cliente estão envolvidas na produção de conteúdo ou marketing?</li>
+                                <li>Quais habilidades internas já estão disponíveis? (design, redação/copy, edição de vídeo, gestão de tráfego, etc.)</li>
+                                <li>Qual a frequência atual de postagens nos canais existentes?</li>
+                                <li>Existe alguma limitação técnica, de tempo, de equipamento ou de verba para as ações de marketing?</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Objetivo Principal e Conteúdo</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Qual é o objetivo estratégico principal do conteúdo e das ações de marketing nos próximos 90 dias? (Ex: vender mais, ganhar autoridade, crescer base de seguidores, gerar leads, etc.)</li>
+                                <li>Quais posts, temas ou formatos de conteúdo já trouxeram bons resultados anteriormente?</li>
+                                <li>Quais tipos de conteúdo não funcionaram bem ou não geraram o engajamento esperado?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step2-content">
+                    <span>2. Auditoria Completa dos Ativos Digitais</span>
+                </button>
+                <div id="step2-content" class="step-content bg-slate-700/50 nested-list">
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Canais</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Em quais canais digitais a marca tem participação ativa? (Instagram, Facebook, TikTok, LinkedIn, YouTube, Blog, etc.)</li>
+                                <li>Como é a participação em cada um deles? (Frequência, tipo de conteúdo, tom de voz)</li>
+                                <li>Qual é o resultado alcançado em cada canal? (Métricas chave como seguidores, engajamento, alcance)</li>
+                                <li>Qual o engajamento inicial médio das publicações?</li>
+                                <li>Qual o alcance inicial médio das publicações?</li>
+                                <li>Já foram realizadas vendas, contatos ou fechamentos de negócios através dos canais? Como foi mensurado?</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Site</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Domínio:
+                                    <ul>
+                                        <li>Registros (onde está registrado, titularidade)</li>
+                                        <li>Valor (custo de renovação)</li>
+                                        <li>Expiração (data de vencimento)</li>
+                                        <li>Hospedagem (provedor, plano)</li>
+                                    </ul>
+                                </li>
+                                <li>Conteúdo e Estrutura:
+                                    <ul>
+                                        <li>Quais são as seções mínimas essenciais? (Ex: Home, Sobre, Serviços/Produtos, Contato)</li>
+                                        <li>As informações estão atualizadas e claras?</li>
+                                        <li>O site é responsivo (adaptado para mobile)?</li>
+                                        <li>Velocidade de carregamento.</li>
+                                    </ul>
+                                </li>
+                                <li>Métricas:
+                                    <ul>
+                                        <li>Quantas visitas o site recebe (diário/mensal)?</li>
+                                        <li>Google Analytics está instalado e configurado? Quais principais insights?</li>
+                                        <li>Outras ferramentas de análise em uso.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Contato com Cliente</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Email Marketing: Utiliza? Qual ferramenta? Tamanho da lista, taxa de abertura, cliques.</li>
+                                <li>Google Meu Negócio: Perfil criado e otimizado? Avaliações, informações atualizadas.</li>
+                                <li>Reclame Aqui: Monitoramento da reputação, tempo de resposta, índice de solução.</li>
+                                <li>Outros canais de atendimento (WhatsApp Business, chatbots, etc.).</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Posicionamento Atual</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Qual o posicionamento principal que a marca comunica atualmente?</li>
+                                <li>O que a marca quer que a audiência sinta ao interagir com ela?</li>
+                                <li>A comunicação é consistente em todos os canais?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step3-content">
+                    <span>3. Análise de Mercado e Concorrência</span>
+                </button>
+                <div id="step3-content" class="step-content bg-slate-700/50 nested-list">
+                     <div class="space-y-4">
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Concorrentes Diretos & Indiretos</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Identificar o top 5 de concorrentes em atenção ou receita.</li>
+                                <li>Diferenciar concorrentes de mercado (oferecem o mesmo produto/serviço) de concorrentes de atenção (disputam o mesmo público online).</li>
+                                <li>Análise detalhada dos principais concorrentes:
+                                    <ul>
+                                        <li>Onde ficam (presença física/digital)?</li>
+                                        <li>Qual a faixa de preço praticada?</li>
+                                        <li>A qualidade percebida dos produtos/serviços é boa?</li>
+                                        <li>Como é o atendimento ao cliente?</li>
+                                        <li>Como é o processo de entrega/prestação de serviço?</li>
+                                        <li>O que eles têm de melhor do que a sua marca?</li>
+                                        <li>O que a sua marca tem de melhor do que eles?</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Benchmark de Métricas Sociais</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Comparar métricas chave: número de seguidores, taxa de engajamento (ER), frequência de postagens.</li>
+                                <li>Identificar os principais formatos de conteúdo vencedores utilizados pelos concorrentes.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Share of Voice</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Analisar menções à marca e hashtags relevantes no período.</li>
+                                <li>Ferramentas sugeridas: Brand24, BuzzSumo, Sprout Social (ou alternativas).</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Pricing & Ofertas dos Concorrentes</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Analisar ticket médio, pacotes de serviços, modelos de assinatura, upsells e promoções.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Tendências Culturais & Tecnológicas</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Monitorar memes relevantes, novas features de plataformas sociais, regulamentações (IA, LGPD, etc.).</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Ferramentas Sugeridas para Análise de Mercado</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>SimilarWeb, SparkToro, BuzzSumo, Google Trends, AnswerThePublic, Looker Studio (Google Data Studio).</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 O que Entregar Nesta Etapa (Sugestões)</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Matriz Competitiva (ex: 4x4 com eixos como Alcance e Engajamento).</li>
+                                <li>Tabela de Benchmark de KPIs (comparando os números da marca com a média do setor/concorrentes).</li>
+                                <li>Insight "Lacuna de Oceano Azul" (oportunidade única não explorada).</li>
+                                <li>Top 3 Oportunidades + Top 3 Ameaças (análise SWOT focada).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step4-content">
+                    <span>4. Análise Detalhada do Público</span>
+                </button>
+                <div id="step4-content" class="step-content bg-slate-700/50 nested-list">
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Quem é seu público?</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Para quem você vai escrever/criar conteúdo?</li>
+                                <li>O que essa pessoa está acostumada a ver online? Quais são suas referências?</li>
+                                <li>Qual o contexto de quem está lendo/assistindo seu conteúdo? (Momento do dia, dispositivo, etc.)</li>
+                            </ul>
+                        </div>
+                         <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Como descobrir mais sobre o público?</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Analisar o perfil dos seguidores e dos comentários nos canais da concorrência.
+                                    <ul>
+                                        <li>Listar perfis de pessoas que interagem.</li>
+                                        <li>Observar o tipo de publicação que fazem (pessoal, profissional).</li>
+                                        <li>Inferir características: Tem filhos? Sai com os amigos? Recém-casado(a)? Tipo de roupa que usa (marcas, simples, trabalho)? Interesses demonstrados.</li>
+                                    </ul>
+                                </li>
+                                <li>Realizar enquetes e pesquisas com a audiência atual.</li>
+                                <li>Analisar dados demográficos e de interesse das ferramentas de analytics das plataformas.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Exemplo de "Pessoa Ideal" (Buyer Persona)</h3>
+                            <p class="text-slate-400 mb-2">Criar uma representação semi-fictícia do seu cliente ideal. Exemplo:</p>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li><strong>Nome:</strong> Mariana</li>
+                                <li><strong>Profissão/Área:</strong> Autoridade em história da arte</li>
+                                <li><strong>Idade:</strong> 32 anos</li>
+                                <li><strong>Estado Civil/Família:</strong> Noiva, vai casar, não tem filhos.</li>
+                                <li><strong>Disponibilidade:</strong> Tem tempo para investir nas redes sociais.</li>
+                                <li><strong>Situação Profissional:</strong> Tem um emprego fixo, mas tem tempo para o próprio negócio/projeto paralelo.</li>
+                                <li><strong>Estilo de Vida/Interesses:</strong> Gosta de estar com os amigos, frequenta eventos sociais.</li>
+                                </ul>
+                        </div>
+                         <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-400">🔹 Como se comporta seu público?</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Quem compra de você, também compra de quem (outras marcas/serviços)?</li>
+                                <li>Onde seu público almoça/janta/se diverte?</li>
+                                <li>O que seu público assiste (TV, streaming, YouTube)?</li>
+                                <li>Que tipo de lugares seu público frequenta?</li>
+                                <li>Quais são suas principais dores, desejos, desafios e objeções em relação ao seu nicho/produto/serviço?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step5-content">
+                    <span>5. Identificar Problemas e Desejos Chave</span>
+                </button>
+                <div id="step5-content" class="step-content bg-slate-700/50 nested-list">
+                    <p class="p-4 bg-sky-600/30 rounded-md text-sky-300 mb-4"><strong>Regra-ouro:</strong> Todo insight deve se conectar a um desejo ou a um problema já levantado (pelo cliente ou pela análise). Assim o cliente enxerga valor direto desde o pré-plano.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-red-400">🚨 Problemas Comuns a Identificar:</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li>Público-alvo indefinido (posts genéricos, seguidores heterogêneos).</li>
+                                <li>Objetivos difusos ou contraditórios (equipe quer crescer, diretoria quer vendas imediatas).</li>
+                                <li>Ausência de métricas históricas (sem Google Analytics, Business Suite, planilhas; "não sabemos os números").</li>
+                                <li>Identidade visual inconsistente (feed "colcha de retalhos", paletas distintas, sem foto de perfil padronizada).</li>
+                                <li>Falta de recursos internos (cliente sem designer/videomaker dedicado; tudo feito "quando sobra tempo").</li>
+                                <li>Canais mal configurados (bio sem CTA, links quebrados, destaque de Story antigo).</li>
+                                <li>Histórico ruim com agências (promessas não cumpridas, ceticismo alto, falta de confiança).</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-700 rounded-md shadow">
+                            <h3 class="font-semibold text-lg mb-2 text-green-400">💡 Desejos Comuns e o que Realmente Significam:</h3>
+                            <ul class="list-disc list-inside text-slate-300 space-y-1">
+                                <li><strong>"Quero crescer seguidores rápido"</strong> ➔ Real: Pertencimento, prova social, números que validem a marca.</li>
+                                <li><strong>"Preciso vender meu produto/infoproduto"</strong> ➔ Real: Retorno financeiro tangível.</li>
+                                <li><strong>"Quero autoridade no nicho"</strong> ➔ Real: Reconhecimento, respeito dos pares.</li>
+                                <li><strong>"Vamos lançar um álbum/produto/serviço"</strong> ➔ Real: Impacto de estreia memorável.</li>
+                                <li><strong>"Meu engajamento caiu"</strong> ➔ Real: Diálogo vivo com a audiência.</li>
+                                <li><strong>"Quero construir comunidade fiel"</strong> ➔ Real: Lealdade, advocacy.</li>
+                                <li><strong>"Desejo internacionalizar a marca"</strong> ➔ Real: Expansão de mercado.</li>
+                                <li><strong>"Quero automatizar atendimento"</strong> ➔ Real: Eficiência, escalabilidade.</li>
+                                <li><strong>"Preciso melhorar SEO"</strong> ➔ Real: Visibilidade orgânica de longo prazo.</li>
+                                <li><strong>"Busco parcerias com marcas"</strong> ➔ Real: Monetização, Legitimidade.</li>
+                                <li><strong>"Quero monetizar conteúdo gratuito"</strong> ➔ Real: Receita recorrente sem depender de ads.</li>
+                                <li><strong>"Preciso profissionalizar o Instagram"</strong> ➔ Real: Credibilidade instantânea.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step6-content">
+                    <span>6. Documentação e Organização das Informações</span>
+                </button>
+                <div id="step6-content" class="step-content bg-slate-700/50">
+                    <p class="text-slate-300 mb-2">Todas as informações coletadas devem ser organizadas em um documento central (Ex: Notion, Google Docs, Miro) para fácil acesso e consulta.</p>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Nome do cliente</li>
+                        <li>Data do briefing e das análises</li>
+                        <li>Respostas completas de cada pergunta do briefing</li>
+                        <li>Resultados detalhados da auditoria de canais, site, etc.</li>
+                        <li>Análise de mercado e concorrentes documentada.</li>
+                        <li>Perfis de público/personas detalhados.</li>
+                        <li>Lista de problemas e desejos identificados.</li>
+                        <li>Anexos importantes: prints de insights, relatórios de métricas, etc.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step7-content">
+                    <span>7. Identifique Palavras-Chave e Temas Recorrentes</span>
+                </button>
+                <div id="step7-content" class="step-content bg-slate-700/50">
+                    <p class="text-slate-300">Analise as respostas do cliente e as informações coletadas para identificar palavras-chave, termos e temas que se repetem. Isso pode indicar prioridades, dores latentes ou áreas de oportunidade.</p>
+                    <p class="text-slate-400 mt-1">Ex: se a palavra “autoridade” aparece várias vezes nas respostas do cliente e na análise de desejos, pode indicar uma prioridade de percepção a ser trabalhada.</p>
+                    <div class="mt-4">
+                        <label for="keyword-input" class="block text-sm font-medium text-cyan-400 mb-1">Experimente colar um texto (respostas do cliente, descrições) e identificar palavras-chave:</label>
+                        <textarea id="keyword-input" rows="4" class="w-full p-2 border border-slate-600 rounded-md bg-slate-700 text-slate-200 focus:ring-sky-500 focus:border-sky-500" placeholder="Cole um texto aqui para analisar..."></textarea>
+                        </div>
+                </div>
+            </div>
+            
+            <div class="mb-6 bg-slate-800 rounded-lg shadow-xl overflow-hidden">
+                <button class="accordion-button w-full text-left p-6 text-xl font-semibold focus:outline-none hover:bg-slate-700 transition-colors duration-300 flex justify-between items-center text-sky-500" data-target="step8-content">
+                    <span>8. Crie um Resumo Diagnóstico Estratégico</span>
+                </button>
+                <div id="step8-content" class="step-content bg-slate-700/50">
+                    <p class="text-slate-300">Com base em todas as informações coletadas e analisadas, crie um resumo conciso que destaque:</p>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1 mt-2">
+                        <li>Principais pontos fortes da marca/cliente.</li>
+                        <li>Principais pontos fracos ou desafios.</li>
+                        <li>Oportunidades de mercado identificadas.</li>
+                        <li>Ameaças ou riscos principais.</li>
+                        <li>As dores e desejos mais significativos do cliente e do seu público.</li>
+                        <li>Uma declaração clara do cenário atual.</li>
+                    </ul>
+                    <p class="text-slate-400 mt-2">Este resumo servirá como um guia rápido e um ponto de partida validado para as próximas etapas do planejamento estratégico e criação de conteúdo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8 p-6 bg-slate-800 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-semibold mb-3 text-sky-400">🎯 Resultado esperado da Etapa 1:</h2>
+            <p class="text-slate-300">
+                Um diagnóstico que vá além dos números e revele contexto, intenção e visão de futuro do cliente, fornecendo uma base sólida para a estratégia de marketing digital. Você terá clareza sobre onde o cliente está, para onde quer ir, e quais são os principais desafios e oportunidades no caminho.
+            </p>
+        </section>
+
+        <section class="p-6 bg-gradient-to-r from-sky-500 to-cyan-400 text-slate-900 rounded-lg shadow-2xl">
+            <h2 class="text-2xl font-bold mb-3 flex items-center">
+                <span class="text-3xl mr-2">🧠</span> DICA:
+            </h2>
+            <p class="mb-2 font-medium">Se o cliente não sabe responder diretamente a uma pergunta sobre objetivos ou público, reformule a pergunta para algo mais leve e contextual.</p>
+            <p class="mb-1"><strong class="text-red-700">❌ Exemplo incorreto:</strong> “Qual seu objetivo nos próximos 90 dias?”</p>
+            <p><strong class="text-green-700">✅ Exemplo correto:</strong> “Se tudo der certo daqui a 3 meses com as ações que faremos no Instagram da sua marca, o que você gostaria de estar vivendo ou comemorando?”</p>
+        </section>
+
+        <footer class="text-center mt-12 py-6 border-t border-slate-700">
+            <p class="text-slate-400">&copy; 2024 Método R3 - Guia Interativo. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Script para funcionalidade do accordion
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                const isOpening = !targetContent.classList.contains('open');
+
+                // Fecha todos os outros accordions abertos
+                document.querySelectorAll('.step-content.open').forEach(openContent => {
+                    if (openContent.id !== targetId) {
+                        openContent.classList.remove('open');
+                        const otherButton = document.querySelector(`.accordion-button[data-target="${openContent.id}"]`);
+                        if (otherButton) {
+                           otherButton.classList.remove('open');
+                        }
+                    }
+                });
+
+                // Alterna o estado do accordion clicado
+                if (isOpening) {
+                    targetContent.classList.add('open');
+                    button.classList.add('open');
+                } else {
+                    targetContent.classList.remove('open');
+                    button.classList.remove('open');
+                }
+            });
+        });
+
+        // Opcional: Abrir o primeiro accordion por padrão
+        const firstAccordionButton = document.querySelector('.accordion-button');
+        if (firstAccordionButton) {
+            const firstTargetId = firstAccordionButton.getAttribute('data-target');
+            const firstTargetContent = document.getElementById(firstTargetId);
+            if (firstTargetContent) {
+                firstAccordionButton.classList.add('open');
+                firstTargetContent.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
